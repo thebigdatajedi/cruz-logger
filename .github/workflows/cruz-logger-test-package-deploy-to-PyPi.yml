@@ -1,0 +1,6 @@
+name: cruz-logger Test, Package and Deploy to PyPi
+on: [push]
+jobs:
+runs-on: ubuntu-latest
+steps:
+  - run:
