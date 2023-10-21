@@ -1,6 +1,39 @@
 name: cruz-logger Test, Package and Deploy to PyPi
-on: [push]
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-runs-on: ubuntu-latest
-steps:
-  - run:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Poetry
+        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Run tests
+        run: |
+          cd src/tests
+          pytest
+          cd ../tests/integration
+          pytest
+
+      - name: Build package
+        run: |
+          cd ../
+          poetry build
+
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@27a2f5d
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages: dist/*
