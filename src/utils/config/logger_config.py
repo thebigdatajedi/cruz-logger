@@ -1,10 +1,10 @@
 from logging import Logger, DEBUG
-from typing import TypeVar
+# from typing import TypeVar
 
 from src.utils.logger_custom_formatters import ObjectGraphCustomFormatter
 from src.utils.logger_custom_handler import ObjectGraphCustomRotatingFileHandler
 
-Self = TypeVar('Self', bound='PreConfigObjGraphCustomFmtAndHndlLogger')
+# Self = TypeVar('Self', bound='PreConfigObjGraphCustomFmtAndHndlLogger')
 
 
 class PreConfigObjGraphCustomFmtAndHndlLogger(Logger):
@@ -25,8 +25,8 @@ class PreConfigObjGraphCustomFmtAndHndlLogger(Logger):
         self.logger.addHandler(self.handler)
 
     @staticmethod
-    def create() -> Self:
-        pre_configured_logger_with_rotating_file_handler: Self = PreConfigObjGraphCustomFmtAndHndlLogger()
+    def create() -> 'PreConfigObjGraphCustomFmtAndHndlLogger':
+        pre_configured_logger_with_rotating_file_handler: PreConfigObjGraphCustomFmtAndHndlLogger = PreConfigObjGraphCustomFmtAndHndlLogger()
         return pre_configured_logger_with_rotating_file_handler
 
     def get_formatter(self) -> ObjectGraphCustomFormatter:
