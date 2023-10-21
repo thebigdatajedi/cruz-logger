@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cruz-logger"
+version = "0.1.0"
+description = "This is a preconfigured and configurable object graph logger with a preconfigured, configurable and rotating file handler that writes the object graph of any object passed to the logging method in json format and allows for the configuring of log rotation rules based on log size. Preconfigured to use out of the box because that Hamburger Helper is doing just fine on its own and configurable to meet the individual needs of everyone."
+authors = ["Gabe Cruz <gabe.thebigdatajedi.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^7.4.2"
+datetime = "^5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
