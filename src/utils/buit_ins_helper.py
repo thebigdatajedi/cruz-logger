@@ -4,8 +4,6 @@ from typing import Any
 
 
 class BuiltInsHelper:
-    def __init__(self, logger: logging.Logger):
-        self.logger = logger
 
     @staticmethod
     def is_built_in(my_obj: Any) -> bool:
