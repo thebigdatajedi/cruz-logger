@@ -1,5 +1,5 @@
 import logging
-from logging import Logger, FileHandler, Formatter
+from logging import Logger
 from src.utils.logger_custom_formatters import ObjectGraphCustomFormatter
 from src.utils.logger_custom_handler import ObjectGraphCustomRotatingFileHandler
 from src.utils.reader_for_logger_custom_formatters_integration_tests import \
@@ -9,8 +9,9 @@ from src.utils.reader_for_logger_custom_formatters_integration_tests import \
 # We are going to be using this configuration for building the CLI
 def test_object_graph_rotating_file_handler_with_object_graph_custom_formatter():
     # Arrange - Act - Assert
-    # log_file_path = '../test_logs/test.log'
-    log_file_path = '../../test.log'
+    # Use the ru_all_test.sh and this is the correct relative path because the relative path is based on
+    # working directory of the terminal and not the file.
+    log_file_path = 'test_logs/test.log'
 
     # Arrange
     # Arranging the class that will be logged.

@@ -1,17 +1,17 @@
 [tool.poetry]
 name = "cruz-logger"
 version = "0.1.0"
-description = "This is a object graph logger with a and rotating file handler that allows for log rotation rules based on log size. Preconfigured to use out of the box 'I don't know why they call this stuff hamburger helper. It does just fine by itself, huh?'(Cousin Eddie)."
-authors = ["Gabe Cruz <gabe.thebigdatajedi.me>"]
+description = "Preconfigured object graph logger with a more enterprise feel to it."
+authors = ["Gabe Cruz <gabe.cruz@henryscheinone.com>"]
+license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.10.12"
-pytest = "^7.4.2"
-datetime = "^5.2"
+python = "^3.12"
+pytest = "^7.4.3"
+timestamps = "^1.3.0"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
