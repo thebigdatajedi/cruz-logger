@@ -69,3 +69,25 @@ def test_object_graph_rotating_file_handler_with_object_graph_custom_formatter()
     assert expected_name in record_last_logged
     assert expected_size in record_last_logged
     assert str(expected_id) in record_last_logged
+
+
+def test_object_graph_rotating_file_handler_with_object_graph_custom_formatter_with_python_builtins():
+    pass
+
+
+def test_object_graph_rotating_file_handler_with_object_graph_custom_formatter_with_python_builtins_data_classes():
+    pass
+
+
+def test_object_graph_and_python_builtins_classes_with_static_vars_and_instance_vars():
+    pass
+
+
+def test_object_graph_and_python_builtins_classes_with_static_vars_and_instance_vars_and_instance_methods():
+    pass
+
+
+def test_o_g_and_python_builtins_classes_with_static_vars_and_instance_vars_and_instance_methods_and_static_methods():
+    pass
+
+# is a class method and a static method the same thing in Python?
